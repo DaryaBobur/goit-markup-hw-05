@@ -684,6 +684,45 @@ ul {
   border-right: 1px solid var(--portfolio-card-border);
   border-bottom: 1px solid var(--portfolio-card-border);
 }
+.portfolio-link:hover .portfolio-thumb,
+.portfolio-link:focus .portfolio-thumb {
+  opacity: 1;
+}
+.portfolio-link:hover .product-thumb::before,
+.portfolio-link:focus .product-thumb::before {
+  opacity: 1;
+}
+.product-thumb {
+  position: relative;
+}
+.product-thumb::before {
+  display: inline-block;
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: var(--portfolio-overlay);
+
+  opacity: 0;
+}
+.product-thumb:hover::before,
+.product-thumb:focus::before {
+  opacity: 1;
+}
 .portfolio-thumb {
+  position: absolute;
+  top: 63px;
+  left: 24px;
+
+  opacity: 0;
   margin-bottom: 0;
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  color: var(--primary-white-color);
 }
