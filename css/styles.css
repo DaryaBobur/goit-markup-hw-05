@@ -390,7 +390,7 @@ ul {
 .works-list > .item {
   position: relative;
 }
-.works-list > .item::before {
+.work-desc {
   display: inline-block;
   content: '';
   position: absolute;
